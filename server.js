@@ -1,6 +1,7 @@
 // Dependencies
 var express = require("express");
 var bodyParser = require("body-parser");
+var logger = require("morgan");
 var mongoose = require("mongoose");
 // Requiring our models
 var Note = require("./models/Note.js");
@@ -12,6 +13,7 @@ var cheerio = require("cheerio");
 // Initialize Express
 var app = express();
 
+app.use(logger("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Make public a static dir
