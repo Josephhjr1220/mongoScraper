@@ -45,7 +45,7 @@ db.once("open", function () {
 // Routes
 // index route loads index.html
 app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
 // A GET request to scrape reddit
